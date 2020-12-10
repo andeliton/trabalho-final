@@ -1,5 +1,6 @@
 ---
-title: "Todos pela Popularidade: Como o Apoio do Presidente é Capaz de Afetar o Posicionamento dos Parlamentares Brasileiros." 
+title: "Todos pela Popularidade:" 
+subtitle: "Como o Apoio do Presidente é Capaz de Afetar o Posicionamento dos Parlamentares Brasileiros."
 author: "Andéliton Soares"
 date: "10/12/2020"
 output: 
@@ -8,6 +9,11 @@ output:
    theme: united
    toc_float: true
    number_sections: true
+   abstract: "Resumo: A pandemia do novo coronavírus estabelece forte choque exógeno. Os prejuízos são esperados e já observados, e a esquiva de culpabilidade e reivindicação de crédito são elementos importante do jogo político como um todo e da questão da pandemia em particular. O presente artigo tem como propósito analisar descritivamente os posicionamentos dos parlamentares nas duas casas legislativas brasileiras, segundo a ideologia e a proximidade ao Governo, a respeito do distanciamento social e das medidas tomadas pelo Presidente. Os resultados apontam para o fato de que a retomada da popularidade Presidencial acompanha maior apoio ao Presidente por partidos de Centro e de Direita. A Esquerda, por sua vez, possui posicionamento consistente ao enfrentamento ao Executivo Federal."
+   language: pt
+   fontsize: 12
+   
+
 ---
 
 ```{r setup, include=FALSE}
