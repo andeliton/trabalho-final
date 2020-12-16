@@ -8,7 +8,6 @@ output:
    toc: true
    theme: united
    toc_float: true
-   number_sections: true
 abstract: "Resumo: A pandemia do novo coronavírus estabelece forte choque exógeno. Os prejuízos são esperados e já observados, e a esquiva de culpabilidade e reivindicação de crédito são elementos importante do jogo político como um todo e da questão da pandemia em particular. O presente artigo tem como propósito analisar descritivamente os posicionamentos dos parlamentares nas duas casas legislativas brasileiras, segundo a ideologia e a proximidade ao Governo, a respeito do distanciamento social e das medidas tomadas pelo Presidente. Os resultados apontam para o fato de que a retomada da popularidade Presidencial acompanha maior apoio ao Presidente por partidos de Centro e de Direita. A Esquerda, por sua vez, possui posicionamento consistente ao enfrentamento ao Executivo Federal."
 fontsize: 12
 text_align: "center"
@@ -23,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-# Introdução(lembrar das notas de rodapé) 
+# Introdução
 
 Ainda há muito a se explorar acerca das implicações políticas do novo Coronavírus. A pandemia toca em diversas dimensões da análise política: comportamental, políticas públicas, federalismo, liderança, e, também, política legislativa. Para a saúde e gestão públicas, apresenta-se como um dos maiores desafios dos últimos tempos e, longe de limitar-se a gestores e especialistas, apresenta-se como grande problema aos pesquisadores. 
   	
@@ -35,7 +34,7 @@ Porém, o enfoque político do fenômeno, como será defendido, não só torna p
   
 O presente artigo argumenta que a pandemia é um desafio político: é fonte de inevitáveis perdas, fazendo forças políticas não só se organizarem para o seu combate, mas, igualmente, para a administração do prejuízo político gerado.  A literatura demonstra como pandemias anteriores concentram extrema sensibilidade através do caos e da crise gerados. A realidade é desastrosa e repleta de viés negativo, independente dos passos e da agilidade da ação governamental (FLINDERS, 2020). Tomando o enfoque da tendência ao maior impacto de perdas gerado pela maior sensibilidade a prejuízos do que ganhos (WEAVER, 1986), o produto acaba sendo a abertura para “jogos de culpa” que cria diferentes cenários de “esquiva de culpabilidade” (HOOD, 2010).
 
-A pandemia, por outro lado, pode ser vista como choque exógeno, tendo a capacidade de criar oportunidades como fator unificador através do conceito de “Todos pela Pátria”, rally-‘round-the-flag ,  como ocorre no caso dinamarquês e britânico (BAEKGAARD et al., 2020; FLINDERS, 2020). Nesse sentido, teria um efeito moderador nas preferências políticas de elites e massa. Na massa, também, o medo da morte pode gerar incentivos para posturas críticas às soluções miraculosas e não científicas para o problema, projetando a população igualmente para um caminho de moderação (Pereira et. al 2020).
+A pandemia, por outro lado, pode ser vista como choque exógeno, tendo a capacidade de criar oportunidades como fator unificador através do conceito de “Todos pela Pátria”, rally-‘round-the-flag[^1],  como ocorre no caso dinamarquês e britânico (BAEKGAARD et al., 2020; FLINDERS, 2020). Nesse sentido, teria um efeito moderador nas preferências políticas de elites e massa. Na massa, também, o medo da morte pode gerar incentivos para posturas críticas às soluções miraculosas e não científicas para o problema, projetando a população igualmente para um caminho de moderação (Pereira et. al 2020).
 Por outro lado, pode ser também uma ferramenta para o aprofundamento de clivagens e da polarização política, principalmente em países governados por políticos populistas que adotam uma postura negacionista (MEYER, 2020). O Brasil, no caso, é um dos países (cinco no mundo) com uma liderança política que menospreza e reduz os impactos da pandemia, conforme aponta Meyer. Ressalta-se a importante comoção gerada por medidas contrárias ao distanciamento social por parte do Poder Executivo Federal, acompanhada de queda de popularidade nos momentos iniciais da pandemia. Após alguns meses, a popularidade do Presidente da República volta a crescer em um cenário agravante da pandemia do novo Coronavírus ao redor do mundo, existindo flexibilização do distanciamento social em diversas partes do Brasil. Bolsonaro se portou porta-voz da necessidade de flexibilização das restrições impostas à circulação de pessoas, defendendo a necessidade de abrir a economia. Fez questão de contrapor economia e pandemia, alertando para os problemas gerados no tratamento da segunda para a primeira.
 
 Neste artigo, contribuímos com o debate através de uma análise das posições em relação ao enfretamento da pandemia adotadas pelas duas casas do Poder Legislativo brasileiro, matizado pela ideologia dos partidos e sua proximidade com o governo. Colocamos algumas questões que iremos responder com dados dos discursos parlamentares proferidos em ambas as casas. Dessa forma, busca-se saber o posicionamento dos parlamentares com relação às ações e posturas do Governo Federal, e ao distanciamento social.
@@ -58,10 +57,10 @@ Tomando o enfoque sociopolítico, as medidas de distanciamento social trouxeram 
 
 A pandemia gera enorme insegurança e instabilidade em seus momentos iniciais. As medidas de combate ao vírus baseiam-se no distanciamento social, com possíveis períodos de “lockdown”, o fechamento obrigatório de estabelecimentos públicos e a vedação de atividades que promovam aglomeração. As medidas de enfrentamento são importante termômetro para a opinião pública, possivelmente levando a maior ou menor adesão às práticas recomendadas, como higienização contínua das mãos, distanciamento social e o uso de máscaras. Gestores passam a ser responsabilizados por suas ações e, no Brasil, a disputa entre Governo Federal de um lado, e governos estaduais e municipais de outro acirrou o conflito político nacional, impossibilitando qualquer efeito de união em torno de uma causa comum – não houve uma dinâmica de “rally ‘round the flag”. Muito ao contrário: Bolsonaro, como fazem populistas, apostou no acirramento da polarização, defendendo posições controversas, muitas delas não apoiadas por evidências empíricas.
 
- 	Do outro lado da moeda, países com muita desigualdade e pobres sofrem ainda mais, pois o distanciamento social é inviável para grande parte da população: os mais vulneráveis e pobres. Em estados federados, há a extrema pressão existente advinda da queda de arrecadação dos entes políticos e a recessão econômica potencial. 
+Do outro lado da moeda, países com muita desigualdade e pobres sofrem ainda mais, pois o distanciamento social é inviável para grande parte da população: os mais vulneráveis e pobres. Em estados federados, há a extrema pressão existente advinda da queda de arrecadação dos entes políticos e a recessão econômica potencial. 
 Aqueles no comando do Poder Executivo têm que lidar com escolhas de distanciamento, que impactam o gasto público e a arrecadação de tributos, e de flexibilização/encerramento do distanciamento, que geram a diminuição dos impactos econômicos negativos e aumentam a probabilidade de mortes que inevitavelmente serão atribuídas a cargo de tal medida. Esse é o grande dilema posto acerca da pandemia na política nacional.
 
-É plausível supor que o Poder Executivo sofra em maior escala , tendo como pressuposto o fato de ser linha de frente das medidas tomadas, a vitrine da gestão nacional, estadual e municipal e o principal afetado quando da recuperação econômica. Os eleitores julgarão os seus candidatos frente a um cenário de crise e que pode ser extremamente associado as ações daqueles no comando do Executivo. Já os parlamentares operam em um cenário de alto custo de entendimento e participação (NICOLAU, 2017) e possuem grande margem para evitar efeitos negativos. 
+É plausível supor que o Poder Executivo sofra em maior escala[^2] , tendo como pressuposto o fato de ser linha de frente das medidas tomadas, a vitrine da gestão nacional, estadual e municipal e o principal afetado quando da recuperação econômica. Os eleitores julgarão os seus candidatos frente a um cenário de crise e que pode ser extremamente associado as ações daqueles no comando do Executivo. Já os parlamentares operam em um cenário de alto custo de entendimento e participação (NICOLAU, 2017) e possuem grande margem para evitar efeitos negativos. 
 
 Como exemplo disso, a literatura aponta que a reeleição de presidentes é sensível à situação econômica (CAMPELLO; ZUCCO, 2016; KRAMER, 1971), sendo considerada, inclusive, fator de peso para interrupção de mandados (PÉREZ-LIÑÁN, 2007). No caso brasileiro, há evidência para a desvantagem existente nas reeleições para prefeito (KLAŠNJA; TITIUNIK, 2017). 
 No entanto, com relação aos deputados federais, trabalhos demonstram a vantagem na reeleição existente para incumbentes (MEIRELES, 2019) e a falha dos eleitores em punir condutas ilegais (BOAS; HIDALGO; MELO, 2019) e a corrupção, mitigada pelo grau de financiamento de campanha (JUCÁ; MELO; RENNÓ, 2016). 
@@ -93,7 +92,7 @@ H3: O Centro possui maior mobilidade qualitativa (ataque/defesa) de seus posicio
 
 # Metodologia e Dados 
 
-Os discursos proferidos em plenário no período de março até o fim agosto de 2020 foram analisados para fins do presente trabalho, tendo por critério de seleção a pertinência com o tema da pandemia.   Os pronunciamentos dos parlamentares foram extraídos da plataforma oficial de ambas as casas. Foram analisados mais de 4500 mil discursos que tratavam da pandemia do novo coronavírus, em ambas as casas (tabela 1 e 2). A composição da amostra dos discursos se deu através da busca por palavras-chaves sobre o tema da pandemia, havendo um processo posterior de limpeza da amostra para a eliminação de eventuais discursos duplicados. 
+Os discursos proferidos em plenário no período de março até o fim agosto de 2020 foram analisados para fins do presente trabalho, tendo por critério de seleção a pertinência com o tema da pandemia[^3]. Os pronunciamentos dos parlamentares foram extraídos da plataforma oficial de ambas as casas. Foram analisados mais de 4500 mil discursos que tratavam da pandemia do novo coronavírus, em ambas as casas (tabela 1 e 2). A composição da amostra dos discursos se deu através da busca por palavras-chaves sobre o tema da pandemia, havendo um processo posterior de limpeza da amostra para a eliminação de eventuais discursos duplicados[^4]. 
 	
 Tendo o propósito de avaliar o posicionamento dos discursos, sempre quando proferida menção expressa ao Governo Federal, em falas que tratavam da pandemia, considerou-se como ataque menções expressas ao Governo Federal seguida de avaliações negativas, e até mesmo insultos e exaltações a pedidos de impeachment. Já a defesa foi analisada em termos das contestações feitas, do apoio e do elogio expresso.  
 	
@@ -105,73 +104,102 @@ A ideologia dos partidos foi mensurada com base em dados de pesquisas de opiniã
 
 O quadro 1 traz a distribuição dos partidos no contínuo ideológico proposto. Já o quadro 2 os reorganiza nos três campos analisados neste trabalho.
 
-Quadro 1: Ideologia dos partidos segundo a onda de entrevistas de 2017, do mais à esquerda ao mais à direita.
- 	 	 	 	 	 	 	 	 	 	 	 	 
- 								PROS	MDB		PSL	 
-PSOL	PCdoB	PT	REDE	PDT	PSB	PPS	PV	SD	PSDB	PRB	PP	DEM
- 								PTB	PSD			 
- 	 	 	 	 	 	 	 	PODE	PR	 	 	 
-												
-Fonte: “Brazilian Legislative Survey” (ZUCCO; POWER, 2019).
+
+## Ideologia dos partidos {.tabset .tabset-fade .tabset-pilss}
+
+### Quadro 1: Ideologia dos partidos segundo a onda de entrevistas de 2017, do mais à esquerda ao mais à direita.
+
+|Esquerda||||||||||||Direita|
+|-|-|-|-|-|-|-|-|-|-|-|-|-|
+|||||||||PROS|MDB||PSL||	 
+|PSOL|PCdoB|PT|REDE|PDT|PSB|PPS|PV|SD|PSDB|PRB|PP|DEM|
+|||||||||PTB|PSD||||			 
+|||||||||PODE|PR||||	 	 	 
+											
 
 
-Quadro 2: Recorte ideológico para o presente trabalho
-Esquerda	Centro	Direita
-PSOL; PCdoB; PT; REDE; PDT; PSB; CIDADANIA; PV	PROS;MDB;SD;PSDB;PTB;PSD;PODE;PL; AVANTE;	PSL; REP.; PP; DEM; NOVO; PSC; PATRI
+
+### Quadro 2: Recorte ideológico para o presente trabalho
+
+|Esquerda|Centro|Direita|
+|:-:|:-:|:-:|
+|PSOL; PCdoB; PT; REDE; PDT; PSB; CIDADANIA; PV|PROS;MDB;SD;PSDB;PTB;PSD;PODE;PL; AVANTE|PSL; REP.; PP; DEM; NOVO; PSC; PATRI|
+
+#### {-}
  
-Fonte: elaboração dos autores.
+#
+
+**Fonte:** “Brazilian Legislative Survey” (ZUCCO; POWER, 2019) e elaboração dos autores.
 	
 Para classificar o partido como sendo da base do governo, utilizamos a estratégia classificatório de identificar a composição ministerial do gabinete (NETO, 2006). Com base nessa informação, fica claro o isolamento político do Presidente em relação aos partidos com representantes no Congresso Nacional. Conforme apontam Amorim Neto e Pimenta (2020). Bolsonaro rejeitou a forma tradicional de construção de apoio parlamentar no Brasil, abdicando da partilha de ministérios.
 
-	Dessa forma, os únicos partidos que ocuparam alguma pasta em ministérios foram o PSDB, MDB, DEM, NOVO e, recentemente com a reabertura do então fechado Ministério da Comunicação, o PSD. Durante o período tratado, a única mudança PSB entrou na base e MDB saiu. Os partidos listados, com a exceção do MDB, serão considerados ‘próximos ao governo’ que, com a exceção do NOVO e do DEM, pertencem ao Centro. Assim, há uma significativa sobreposição entre presença de partidos no governo e sua posição ideológica de centro.
+Dessa forma, os únicos partidos que ocuparam alguma pasta em ministérios foram o PSDB, MDB, DEM, NOVO e, recentemente com a reabertura do então fechado Ministério da Comunicação, o PSD. Durante o período tratado, a única mudança PSB entrou na base e MDB saiu. Os partidos listados, com a exceção do MDB, serão considerados ‘próximos ao governo’ que, com a exceção do NOVO e do DEM, pertencem ao Centro. Assim, há uma significativa sobreposição entre presença de partidos no governo e sua posição ideológica de centro.
 	
-	Com base nessas classificações dos discursos e partidos, temos uma amostra com as características apontadas nas tabelas 1 e 2. Na Câmara dos Deputados e no Senado prevalecem discursos feitos por partidos de esquerda de forma geral, mas também sobre a Covid-19. Contudo, quando pensamos na parcela do total de discursos sobre Covid por cada agrupamento partidário com base no posicionamento ideológico, vemos que partidos de esquerda na Câmara são o grupo que mais se dedicam ao tema, com 57% dos discursos sobre a pandemia. Em um distante segundo lugar ficam os partidos de esquerda no Senado. Já a direita no Senado é quem menos fala sobre Covid, com apenas 15% tratando do tema. O centro se destaca, mas muito sutilmente, por tratar mais do tema sem mencionar o Poder Executivo.
+Com base nessas classificações dos discursos e partidos, temos uma amostra com as características apontadas nas tabelas 1 e 2. Na Câmara dos Deputados e no Senado prevalecem discursos feitos por partidos de esquerda de forma geral, mas também sobre a Covid-19. Contudo, quando pensamos na parcela do total de discursos sobre Covid por cada agrupamento partidário com base no posicionamento ideológico, vemos que partidos de esquerda na Câmara são o grupo que mais se dedicam ao tema, com 57% dos discursos sobre a pandemia. Em um distante segundo lugar ficam os partidos de esquerda no Senado. Já a direita no Senado é quem menos fala sobre Covid, com apenas 15% tratando do tema. O centro se destaca, mas muito sutilmente, por tratar mais do tema sem mencionar o Poder Executivo.
 
-Tabela 1: Descrição da amostra de discursos da Câmara dos Deputados (março a agosto de 2020)
-Ideologia	Total	Covid	% Covid do total	% Covid	Covid e Executivo	% Covid e Executivo	% Covid sem Executivo	% Demais assuntos 
-Esquerda	5007	2444	48,8%	57,8%	938	38,40%	30,10%	32,50%
-Direita	2227	932	41,9%	22,0%	243	26,10%	30,90%	47,20%
-Centro	1934	854	44,2%	20,2%	210	24,60%	33,30%	45,00%
-Total	9168	4230	46,1%	100,0%	1391	32,90%	31,00%	38,70%
-Fonte: Dados da pesquisa e elaboração dos autores
+## Amostra dos discursos (março a agosto de 2020) {.tabset .tabset-fade .tabset-pilss}
+
+### Tabela 1 - Câmara dos Deputados 
+
+|Ideologia|Total|Covid|% Covid do total|% Covid|Covid e Executivo|% Covid e Executivo|% Covid sem Executivo|% Demais assuntos[^5]| 
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|Esquerda|5007|2444|48,8%|57,8%|938|38,40%|30,10%|32,50%|
+|Direita|2227|932|41,9%|22,0%|243|26,10%|30,90%|47,20%|
+|Centro|1934|854|44,2%|20,2%|210|24,60%|33,30%|45,00%|
+|Total|9168|4230|46,1%|100,0%|1391|32,90%|31,00%|38,70%|
+
+### Tabela 2 - Senado Federal
+
+|Ideologia|Total|Covid|% Covid do total|% Covid|Covid e Executivo|% Covid e Executivo|% Covid sem Executivo|% Demais assuntos| 
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|Esquerda|342|207|60,5%|48,9%|67|32,37%|40,94%|19,90%|
+|Direita|150|65|43,3%|15,4%|21|32,31%|29,33%|42,70%|
+|Centro|273|151|55,3%|35,7%|38|25,17%|41,39%|30,80%|
+|Total|765|423|55,3%|100,0%|126|29,79%|38,82%|28,20%|
 
 
+#### {-}
 
+#
 
-
-
+**Fonte:** Dados da pesquisa e elaboração dos autores
 	
-Tabela 2: Descrição da amostra de discursos do Senado Federal (março a agosto de 2020)
-Ideologia	Total	Covid	% Covid do total	% Covid	 Covid e Executivo	% Covid e Executivo	% Covid sem Executivo	% Demais assuntos
-Esquerda	342	207	60,5%	48,9%	67	32,37%	40,94%	19,90%
-Direita	150	65	43,3%	15,4%	21	32,31%	29,33%	42,70%
-Centro	273	151	55,3%	35,7%	38	25,17%	41,39%	30,80%
-Total	765	423	55,3%	100,0%	126	29,79%	38,82%	28,20%
-Fonte: Dados da pesquisa e elaboração dos autores
-	Passamos agora à avaliação das três hipóteses com base no banco de dados coletados.
+  
+  
+Passamos agora à avaliação das três hipóteses com base no banco de dados coletados.
+ 
+ 
+
 
 # Resultados 
 
-	 Como mencionado previamente, os resultados principais serão apresentados em forma de “ondas” (1, 2 e 3) baseadas nas pesquisas de opinião realizadas no período, sendo a transição da segunda para a terceira onda o início da retomada da popularidade presidencial. As ondas estão definidas assim: a primeira transcorre entre 01/03 e 25/05; a segunda entre 26/05 e 23/06; e a terceira entre 24/06 e 31/08, sendo esta última data o fim do período analisado. Nas figuras existem as indicações das ondas por número. A título de esclarecimento, as tabelas 3 e 4 apresentam um resumo dos dados de opinião pública e do recorte feito por ondas, demonstrando a sua duração. Devido a disparidade dos períodos entre ondas e ao recesso parlamentar (de 18 a 31 de julho), os resultados serão analisados em termos proporcionais para cada uma delas. 
-
-Tabela 3: dados sobre as datas de realização e resultados das pesquisas de opinião realizadas no período
-Data	Nº pesquisa realizada no período	% ótimo/bom	% regular	% ruim/péssimo
-27/04/2020	1ª	33	26	38
-26/05/2020	2ª	33	22	43
-24/06/2020	3ª	32	23	44
-12/08/2020	4ª	37	27	34
-Fonte: Data Folha e elaboração dos autores
+Como mencionado previamente, os resultados principais serão apresentados em forma de “ondas” (1, 2 e 3) baseadas nas pesquisas de opinião realizadas no período, sendo a transição da segunda para a terceira onda o início da retomada da popularidade presidencial. As ondas estão definidas assim: a primeira transcorre entre 01/03 e 25/05; a segunda entre 26/05 e 23/06; e a terceira entre 24/06 e 31/08, sendo esta última data o fim do período analisado. Nas figuras existem as indicações das ondas por número. A título de esclarecimento, as tabelas 3 e 4 apresentam um resumo dos dados de opinião pública e do recorte feito por ondas, demonstrando a sua duração. Devido a disparidade dos períodos entre ondas e ao recesso parlamentar (de 18 a 31 de julho), os resultados serão analisados em termos proporcionais para cada uma delas. 
 
 
+## Dados sobre as pesquisas de opinião e marco das ondas de análise  {.tabset .tabset-fade .tabset-pilss}
 
+### Tabela 3: dados sobre as datas de realização e resultados das pesquisas de opinião realizadas no período
 
-Tabela 4: descrição dos períodos referentes as ondas
-Onda	Data início	Data fim	Nº pesquisa de referência	Duração (dias)
-1	01/03/2020	25/05/2020	1ª	85
-2	26/05/2020	23/06/2020	2ª	28
-3	24/06/2020	31/08/2020	3ª e 4ª	67
-Fonte: Dados da pesquisa e elaboração dos autores
+|Data|Nº pesquisa realizada no período|% ótimo/bom|% regular|% ruim/péssimo|
+|:-:|:-:|:-:|:-:|:-:|
+|27/04/2020|1ª|33|26|38|
+|26/05/2020|2ª|33|22|43|
+|24/06/2020|3ª|32|23|44|
+|12/08/2020|4ª|37|27|34|
 
+### Tabela 4: descrição dos períodos referentes as ondas
+
+|Onda|Data início|Data fim|Nº pesquisa de referência|Duração (dias)|
+|:-:|:-:|:-:|:-:|
+|1|01/03/2020|25/05/2020|1ª|85|
+|2|26/05/2020|23/06/2020|2ª|28|
+|3|24/06/2020|31/08/2020|3ª e 4ª|67
+
+#### {-}
+
+# 
+
+**Fonte:** Data Folha, dados da pesquisa e elaboração dos autores
 
 Os gráficos que seguem dizem respeito a amostra de discursos sobre a pandemia e que trazem menções ao poder Executivo. 
 Como vimos, partidos de esquerda tratam do tema da pandemia com maior frequência. Estes tendem não só a falar mais sobre o covid-19, mas quando falam, mencionam o Governo Federal, apresentando críticas na maioria das vezes. Como fica claro nas figuras 1 e 2, esse posicionamento é consistente no período tratado, indicando que não há variação de acordo com a popularidade do Presidente, mantendo proporção de aproximadamente 70% de seus discursos sobre o covid-19 e Executivo com teor de críticas e nenhuma incidência de apoios. Esse padrão é relativizado no Senado Federal (figuras 3 e 4) onde o tema também é tratado em similar frequência pelos partidos de Centro.  
@@ -260,6 +288,12 @@ POWER, T. J.; JR, C. Z. Estimating Ideology of Brazilian Legislative Parties, 19
 WEAVER, K. R. The Politics of Blame Avoidance Author. Journal of Public Policy, v. 6, n. 4, p. 371–398, 1986. 
 
 ZUCCO, C.; POWER, T. Brazilian Legislative Surveys (Waves 1-8, 1990-2017). Harvard Dataverse, 2019. 
+
+[^1]:“Todos pela pátria”: Conceito sistematizado nos anos 70 para tratar dos efeitos sociais e políticos gerados por eventos de grande comoção nacional, como, por exemplo, guerras (MUELLER, 1973).
+[^2]:A pesar de a literatura que trata do efeito rally-‘round-the-flag demonstrar aumento da popularidade presidencial em casos de crise, igualmente condiciona esse efeito a uma duração curta, circunscrita aos critérios da crise (HETHERINGTON; NELSON, 2003).
+[^3]:Os discursos foram analisados de forma manual. A coleta e a análise se deram no mês de setembro de 2020. Através das buscas, os discursos foram estruturados em forma de tabela, lidos e classificados de acordo com as categorias que serão apresentadas. 
+[^4]:As palavras-chaves foram: “pandemia”, “covid”, "coronavírus”, “isolamento”, “lockdown” e “auxílio econômico”. O processo de limpeza de duplicatas se deu através dos códigos identificadores de cada discurso, o seu autor e a data do pronunciamento. 
+[^5]:Em ambas as tabelas, a classificação de “Demais assuntos” diz respeito a diferentes temáticas discutidas pelo parlamento, como, por exemplo: “segurança pública”, “educação”, “agricultura” etc. Dessa forma, o recorte mais importante é aquele dado a presença do debate sobre a pandemia, deixando discurso que não levantavam o tema fora da amostra analisada. 
 
 
 
