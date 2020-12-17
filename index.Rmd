@@ -2,15 +2,14 @@
 title: "Todos pela Popularidade:" 
 subtitle: "Como o Apoio do Presidente é Capaz de Afetar o Posicionamento dos Parlamentares Brasileiros."
 author: "Andéliton Soares"
-date: "10/12/2020"
 output: 
   html_document:
    toc: true
    theme: united
    toc_float: true
 abstract: "Resumo: A pandemia do novo coronavírus estabelece forte choque exógeno. Os prejuízos são esperados e já observados, e a esquiva de culpabilidade e reivindicação de crédito são elementos importante do jogo político como um todo e da questão da pandemia em particular. O presente artigo tem como propósito analisar descritivamente os posicionamentos dos parlamentares nas duas casas legislativas brasileiras, segundo a ideologia e a proximidade ao Governo, a respeito do distanciamento social e das medidas tomadas pelo Presidente. Os resultados apontam para o fato de que a retomada da popularidade Presidencial acompanha maior apoio ao Presidente por partidos de Centro e de Direita. A Esquerda, por sua vez, possui posicionamento consistente ao enfrentamento ao Executivo Federal."
-fontsize: 12
-text_align: "center"
+fontsize: 12pt
+text-align: justify
 indent: true
 header-includes: true
 language: pt
@@ -22,7 +21,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-# Introdução
+# 1 Introdução
+
 
 Ainda há muito a se explorar acerca das implicações políticas do novo Coronavírus. A pandemia toca em diversas dimensões da análise política: comportamental, políticas públicas, federalismo, liderança, e, também, política legislativa. Para a saúde e gestão públicas, apresenta-se como um dos maiores desafios dos últimos tempos e, longe de limitar-se a gestores e especialistas, apresenta-se como grande problema aos pesquisadores. 
   	
@@ -49,7 +49,7 @@ Os resultados demonstram que partidos de esquerda são críticas de forma consis
 
 Além desta introdução, o presente artigo possui uma seção que visa a discutir, brevemente, a dinâmica política do enfrentamento da crise. Em seguida, há uma apresentação das hipóteses, a discussão metodológica e dos resultados. 
 
-# O que há em jogo com a pandemia? 
+# 2 O que há em jogo com a pandemia? 
   
 A pandemia, atrelada a já existente discussão acerca da crise da democracia (KEANE, 2020), traz importantes desafios de confiança, culpabilidade e entendimento (FLINDERS, 2020). Existem debates acerca da capacidade democrática em responder a atual crise de saúde pública (KAVANAGH; SINGH, 2020), demonstrando que em comparação com regimes autoritários as democracias responderam pior ao começo da pandemia (CEPALUNI; DORSCH; BRANYICZKI, 2020).
 
@@ -81,7 +81,7 @@ Com relação àqueles próximos ao Presidente, resta se perguntar qual seria o 
 
 É de se imaginar, igualmente, que o apoio do Presidente tenha um custo, e que os recursos federais enviados para âmbito local possuam forte poder explicativo para o posicionamento individual e coletivo dos parlamentares (PEREIRA; MUELLER, 2002, 2003). No entanto, o presente trabalho utilizará como variável explicativa a popularidade do Presidente, tentando se aproximar a troca de recursos através dos partidos que compõem sua base de apoio – ideia operacionalizada pela ocupação de ministérios no gabinete. 
 
-# Hipóteses 
+# 3 Hipóteses 
 
 Com base na discussão anterior, três hipóteses centrais serão testadas. Analisaremos as posições de partidos de esquerda, centro e direita condicionadas pela popularidade presidencial e sua posição no governo. Partiremos do pressuposto que partidos de esquerda serão opositores ao atual presidente, dado seu posicionamento ideológico e a disputa colocada pelas eleições de 2018. Já partidos de direita e, principalmente, centro, tem posturas que são possivelmente menos evidentes, podendo oscilar mais em seu apoio e condicioná-lo mais diretamente a terceiros elementos – fatores intervenientes – como a popularidade do presidente. Assim:
  H1: À medida que a popularidade do Presidente diminui, aumentam ainda mais os ataques já realizados por partidos de esquerda.
@@ -90,7 +90,7 @@ H2: A Direita é a única que defende o Presidente durante momentos mais sensív
 Com relação ao Centro, existe importante hipótese a ser testada a respeito de como possui mobilidade e é sensível a popularidade presidencial. Aproveitando-se, dessa forma, de importante elemento de pressão ao Governo quando de sua baixa popularidade, e usufruindo da possibilidade de apoiar medidas que agradem a população em igual medida. Sendo, dessa forma, mais sensível a popularidade presidencial para a mudança qualitativa de seu posicionamento:
 H3: O Centro possui maior mobilidade qualitativa (ataque/defesa) de seus posicionamentos em função da popularidade presidencial. 
 
-# Metodologia e Dados 
+# 4 Metodologia e Dados 
 
 Os discursos proferidos em plenário no período de março até o fim agosto de 2020 foram analisados para fins do presente trabalho, tendo por critério de seleção a pertinência com o tema da pandemia[^3]. Os pronunciamentos dos parlamentares foram extraídos da plataforma oficial de ambas as casas. Foram analisados mais de 4500 mil discursos que tratavam da pandemia do novo coronavírus, em ambas as casas (tabela 1 e 2). A composição da amostra dos discursos se deu através da busca por palavras-chaves sobre o tema da pandemia, havendo um processo posterior de limpeza da amostra para a eliminação de eventuais discursos duplicados[^4]. 
 	
@@ -171,7 +171,124 @@ Passamos agora à avaliação das três hipóteses com base no banco de dados co
  
 
 
-# Resultados 
+# 5 Resultados 
+
+
+```{r, echo=FALSE,include=FALSE}
+library(tidyverse)
+
+load("graficos.Rdata")
+
+
+ataque_CD<- dados_camara %>% dplyr::select(-X1) %>% 
+  mutate_all(.,~gsub("%","",.)) %>% 
+  mutate(ordem=case_when(ideologia=="esquerda" ~ 1,
+                         ideologia=="centro" ~ 2,
+                         ideologia=="direita" ~ 3)) %>% 
+  group_by(ideologia,onda,ordem) %>% arrange(desc(-ordem))%>% 
+  mutate_at(vars(p_ataque,p_defesa),as.double) %>% 
+  ggplot(aes(x=ideologia, y=p_ataque,fill=onda))+ #escolhendo os eixos e o tipo de divisão centrado em ideologia e onda
+  geom_bar(stat="identity", position=position_dodge())+ #determinando o tipo de barra a ser utilizada
+  geom_text(aes(label=p_ataque), vjust=1.6, color="black",
+            position = position_dodge(0.9), size=3.5)+ #ajustando o texto na "ponta" da coluna para dar maior clareza a respeito do percentual
+  scale_fill_brewer(palette="OrRd")+ #escolhendo uma grupo de cores para as colunas
+  theme_minimal()+
+  labs(x="Ideologia", y = "%") #adicionando legenda nos eixos e um título
+
+defesa_CD<- dados_camara %>% dplyr::select(-X1) %>% 
+  mutate_all(.,~gsub("%","",.)) %>% 
+  mutate(ordem=case_when(ideologia=="esquerda" ~ 1,
+                         ideologia=="centro" ~ 2,
+                         ideologia=="direita" ~ 3)) %>% 
+  group_by(ideologia,onda,ordem) %>% arrange(desc(-ordem))%>% 
+  mutate_at(vars(p_ataque,p_defesa),as.double) %>% 
+  ggplot(aes(x=ideologia, y=p_defesa,fill=onda))+ #escolhendo os eixos e o tipo de divisão centrado em ideologia e onda
+  geom_bar(stat="identity", position=position_dodge())+ #determinando o tipo de barra a ser utilizada
+  geom_text(aes(label=p_defesa), vjust=1.6, color="black",
+            position = position_dodge(0.9), size=3.5)+ #ajustando o texto na "ponta" da coluna para dar maior clareza a respeito do percentual
+  scale_fill_brewer(palette="OrRd")+ #escolhendo uma grupo de cores para as colunas
+  theme_minimal()+
+  labs(x="Ideologia", y = "%") #adicionando legenda nos eixos e um título
+
+ataque_SF<- dados_senado %>% dplyr::select(-p_ataque,-p_defesa,-X1) %>% 
+  mutate_all(.,~gsub("%","",.)) %>% 
+  mutate(ordem=case_when(ideologia=="esquerda" ~ 1,
+                         ideologia=="centro" ~ 2,
+                         ideologia=="direita" ~ 3)) %>% 
+  mutate_at(vars(defesa,ataque,total),as.double) %>% 
+  mutate(p_ataque=round(ataque/total,digits=2)*100,p_defesa=round(defesa/total,digits = 2)*100) %>% 
+  group_by(ideologia,onda,ordem) %>% arrange(desc(-ordem))%>% 
+  mutate_at(vars(p_ataque,p_defesa),as.double) %>% 
+  ggplot(aes(x=ideologia, y=p_ataque,fill=onda))+ #escolhendo os eixos e o tipo de divisão centrado em ideologia e onda
+  geom_bar(stat="identity", position=position_dodge())+ #determinando o tipo de barra a ser utilizada
+  geom_text(aes(label=p_ataque), vjust=1.6, color="black",
+            position = position_dodge(0.9), size=3.5)+ #ajustando o texto na "ponta" da coluna para dar maior clareza a respeito do percentual
+  scale_fill_brewer(palette="OrRd")+ #escolhendo uma grupo de cores para as colunas
+  theme_minimal()+
+  labs(x="Ideologia", y = "%") #adicionando legenda nos eixos e um título
+
+defesa_SF<- dados_senado %>% dplyr::select(-p_ataque,-p_defesa,-X1) %>% 
+  mutate_all(.,~gsub("%","",.)) %>% 
+  mutate(ordem=case_when(ideologia=="esquerda" ~ 1,
+                         ideologia=="centro" ~ 2,
+                         ideologia=="direita" ~ 3)) %>% 
+  mutate_at(vars(defesa,ataque,total),as.double) %>% 
+  mutate(p_ataque=round(ataque/total,digits=2)*100,p_defesa=round(defesa/total,digits = 2)*100) %>% 
+  group_by(ideologia,onda,ordem) %>% arrange(desc(-ordem))%>% 
+  mutate_at(vars(p_ataque,p_defesa),as.double) %>% 
+  ggplot(aes(x=ideologia, y=p_defesa,fill=onda))+ #escolhendo os eixos e o tipo de divisão centrado em ideologia e onda
+  geom_bar(stat="identity", position=position_dodge())+ #determinando o tipo de barra a ser utilizada
+  geom_text(aes(label=p_defesa), vjust=1.6, color="black",
+            position = position_dodge(0.9), size=3.5)+ #ajustando o texto na "ponta" da coluna para dar maior clareza a respeito do percentual
+  scale_fill_brewer(palette="OrRd")+ #escolhendo uma grupo de cores para as colunas
+  theme_minimal()+
+  labs(x="Ideologia", y = "%")
+
+
+
+min_ataque<-gov_camara %>% 
+  mutate_all(.,~gsub("%","",.)) %>% 
+  mutate_all(.,~gsub(",",".",.)) %>% 
+  group_by(partido_governo,onda) %>% 
+  mutate_at(vars(p_ataque,p_defesa),as.double) %>% 
+  ggplot(aes(x=partido_governo, y=p_ataque,fill=onda))+ #escolhendo os eixos e o tipo de divisão centrado em ideologia e onda
+  geom_bar(stat="identity", position=position_dodge())+ #determinando o tipo de barra a ser utilizada
+  geom_text(aes(label=p_ataque), vjust=1.6, color="black",
+            position = position_dodge(0.9), size=3.5)+ #ajustando o texto na "ponta" da coluna para dar maior clareza a respeito do percentual
+  scale_fill_brewer(palette="OrRd")+ #escolhendo uma grupo de cores para as colunas
+  theme_minimal()+
+  labs(x="", y = "%")
+
+min_defesa<-gov_camara %>% 
+  mutate_all(.,~gsub("%","",.)) %>% 
+  mutate_all(.,~gsub(",",".",.)) %>% 
+  group_by(partido_governo,onda) %>% 
+  mutate_at(vars(p_ataque,p_defesa),as.double) %>% 
+  ggplot(aes(x=partido_governo, y=p_defesa,fill=onda))+ #escolhendo os eixos e o tipo de divisão centrado em ideologia e onda
+  geom_bar(stat="identity", position=position_dodge())+ #determinando o tipo de barra a ser utilizada
+  geom_text(aes(label=p_defesa), vjust=1.6, color="black",
+            position = position_dodge(0.9), size=3.5)+ #ajustando o texto na "ponta" da coluna para dar maior clareza a respeito do percentual
+  scale_fill_brewer(palette="OrRd")+ #escolhendo uma grupo de cores para as colunas
+  theme_minimal()+
+  labs(x="", y = "%")
+
+isolamento<-  dados_camara %>% dplyr::select(-X1) %>% 
+  mutate_all(.,~gsub("%","",.)) %>% 
+  mutate(ordem=case_when(ideologia=="esquerda" ~ 1,
+                         ideologia=="centro" ~ 2,
+                         ideologia=="direita" ~ 3)) %>% 
+  group_by(ideologia,onda,ordem) %>% arrange(desc(-ordem))%>% 
+  mutate_at(vars(p_isolamento),as.double) %>% 
+  ggplot(aes(x=ideologia, y=p_isolamento,fill=onda))+ #escolhendo os eixos e o tipo de divisão centrado em ideologia e onda
+  geom_bar(stat="identity", position=position_dodge())+ #determinando o tipo de barra a ser utilizada
+  geom_text(aes(label=p_isolamento), vjust=1.6, color="black",
+            position = position_dodge(0.9), size=3.5)+ #ajustando o texto na "ponta" da coluna para dar maior clareza a respeito do percentual
+  scale_fill_brewer(palette="OrRd")+ #escolhendo uma grupo de cores para as colunas
+  theme_minimal()+
+  labs(x="Ideologia", y = "%") #adicionando legenda nos eixos e um título
+
+
+```
 
 Como mencionado previamente, os resultados principais serão apresentados em forma de “ondas” (1, 2 e 3) baseadas nas pesquisas de opinião realizadas no período, sendo a transição da segunda para a terceira onda o início da retomada da popularidade presidencial. As ondas estão definidas assim: a primeira transcorre entre 01/03 e 25/05; a segunda entre 26/05 e 23/06; e a terceira entre 24/06 e 31/08, sendo esta última data o fim do período analisado. Nas figuras existem as indicações das ondas por número. A título de esclarecimento, as tabelas 3 e 4 apresentam um resumo dos dados de opinião pública e do recorte feito por ondas, demonstrando a sua duração. Devido a disparidade dos períodos entre ondas e ao recesso parlamentar (de 18 a 31 de julho), os resultados serão analisados em termos proporcionais para cada uma delas. 
 
@@ -205,7 +322,97 @@ Os gráficos que seguem dizem respeito a amostra de discursos sobre a pandemia e
 Como vimos, partidos de esquerda tratam do tema da pandemia com maior frequência. Estes tendem não só a falar mais sobre o covid-19, mas quando falam, mencionam o Governo Federal, apresentando críticas na maioria das vezes. Como fica claro nas figuras 1 e 2, esse posicionamento é consistente no período tratado, indicando que não há variação de acordo com a popularidade do Presidente, mantendo proporção de aproximadamente 70% de seus discursos sobre o covid-19 e Executivo com teor de críticas e nenhuma incidência de apoios. Esse padrão é relativizado no Senado Federal (figuras 3 e 4) onde o tema também é tratado em similar frequência pelos partidos de Centro.  
 
 
-# Conclusão 
+**Figura 1:** Ataques ao Poder Executivo na Câmara dos Deputados por espectro e por onda nos discursos que tratam de pandemia e mencionam o Executivo
+
+```{r include=TRUE,results ='asis',echo=FALSE,fig.align="center"}
+       
+    
+  
+plot(ataque_CD)
+```
+**Fonte:** Dados da pesquisa e elaboração dos autores.
+
+**Figura 2:** Defesas ao Poder Executivo na Câmara dos Deputados por espectro e por onda nos discursos que tratam de pandemia e mencionam o Executivo
+
+
+```{r include=TRUE,results ='asis',echo=FALSE,fig.align="center"}
+       
+    
+  
+plot(defesa_CD)
+```
+
+**Fonte:** Dados da pesquisa e elaboração dos autores.
+
+**Figura 3:** Ataques ao Poder Executivo no Senado Federal por espectro e por onda nos discursos que tratam de pandemia e mencionam o Executivo
+
+
+```{r include=TRUE,results ='asis',echo=FALSE,fig.align="center"}
+       
+    
+  
+plot(ataque_SF)
+```
+
+**Fonte:** Dados da pesquisa e elaboração dos autores.
+
+**Figura 4:** Defesas ao Poder Executivo no Senado Federal por espectro e por onda nos discursos que tratam de pandemia e mencionam o Executivo
+
+
+```{r include=TRUE,results ='asis',echo=FALSE,fig.align="center"}
+       
+    
+  
+plot(defesa_CD)
+```
+**Fonte:** Dados da pesquisa e elaboração dos autores.
+
+
+Cabe destacar como o posicionamento dos partidos de centro e de direita na Câmara aumentam sua defesa do Poder Executivo no último momento da análise, quando de queda da popularidade do presidente, mostrando um certo desprendimento em relação à opinião pública.
+Esses dados sustentam em parte as hipóteses H1 e H2. Partidos de esquerda falam mais sobre o tema e discutem mais a responsabilidade do Governo, enquanto a Direita faz o oposto. No entanto, a Esquerda é consistente no período em termos do nível de ataques, o que demonstra que a popularidade, aparentemente, não afeta a consistência do seu grau de enfrentamento ao Governo Federal. Assim, o posicionamento dos partidos de esquerda não condicionados pela popularidade do presidente. A esquerda é consistentemente crítica do atual governo. Por outro lado, a direita e o centro se posicionam mais fortemente na defesa do presidente, mesmo quando sua popularidade cai.
+A tendência de diminuição de menção ao Executivo é mais comum entre os partidos de centro e de direita. 
+A H3 é confirmada uma vez que o posicionamento do centro oscila mais nos três momentos do tempo.
+Quando olhamos para a base do governo, vemos que o seu grau de pronunciamentos favoráveis ao Presidente aumentou consistentemente, ou que tendem a relativizar críticas e aspectos negativos. Ou seja, há uma clara relação de ataque e defesa com base nas posições de governo e oposição; como esperado. Infelizmente, os dados do Senado Federal são inconclusivos, há uma amostra muito pequena para avaliar os posicionamentos em termos de ataques ou defesas. 
+	
+**Figura 5:** Ataque de partidos com ministério na Câmara dos Deputados por espectro e por onda nos discursos que tratam de pandemia e mencionam o Executivo
+
+
+
+```{r include=TRUE,results ='asis',echo=FALSE,fig.align="center"}
+       
+    
+  
+plot(min_ataque)
+```
+**Fonte:** Dados da pesquisa e elaboração dos autores.
+
+
+**Figura 6:** Defesa de partidos com ministério na Câmara dos Deputados por espectro e por onda nos discursos que tratam de pandemia e mencionam o Executivo
+
+```{r include=TRUE,results ='asis',echo=FALSE,fig.align="center"}
+       
+    
+  
+plot(min_defesa)
+```
+
+
+Por último, destrinchamos alguns posicionamentos temáticos dos parlamentares, a fim de ratificar se as posições acima são confirmadas pelo conteúdo substantivo das falas acerca do distanciamento social, com auxílio econômico e sobre impeachment. Fica claro que a esquerda é muito mais vocal no que tange o tema de distanciamento social nas fases iniciais da pandemia, mas perde esse papel de destaque no desenrolar da crise, compartilhando-o com o centro.
+
+**Figura 7:** Apoio ao distanciamento social e auxílio econômico na Câmara dos Deputados por espectro e por onda
+
+```{r include=TRUE,results ='asis',echo=FALSE,fig.align="center"}
+       
+    
+  
+plot(isolamento)
+```
+
+
+
+**Fonte:** Dados da pesquisa e elaboração dos autores.
+
+# 6 Conclusão 
 
 O estudo descritivo do posicionamento do Congresso Nacional mostra uma significativa preocupação desse poder com a pandemia, dominando a agenda de falas dos parlamentares, principalmente os de partidos de esquerda. Já a discussão dos temas por partidos de centro e direita está um pouco mais sujeita à popularidade do Presidente. Embora, nos momentos de queda de popularidade, esses dois grupos defenderam abertamente o presidente. 
  
@@ -288,6 +495,11 @@ POWER, T. J.; JR, C. Z. Estimating Ideology of Brazilian Legislative Parties, 19
 WEAVER, K. R. The Politics of Blame Avoidance Author. Journal of Public Policy, v. 6, n. 4, p. 371–398, 1986. 
 
 ZUCCO, C.; POWER, T. Brazilian Legislative Surveys (Waves 1-8, 1990-2017). Harvard Dataverse, 2019. 
+
+
+
+
+#### Notas 
 
 [^1]:“Todos pela pátria”: Conceito sistematizado nos anos 70 para tratar dos efeitos sociais e políticos gerados por eventos de grande comoção nacional, como, por exemplo, guerras (MUELLER, 1973).
 [^2]:A pesar de a literatura que trata do efeito rally-‘round-the-flag demonstrar aumento da popularidade presidencial em casos de crise, igualmente condiciona esse efeito a uma duração curta, circunscrita aos critérios da crise (HETHERINGTON; NELSON, 2003).

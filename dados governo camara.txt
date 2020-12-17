@@ -1,0 +1,7 @@
+partido_governo	onda	isolamento	menciona_executivo	ataque	defesa	mandetta	providencia	imp_sim	imp_nao	isolamento_sim	isolamento_nao	rodrigo	total	p_ataque	p_defesa
+Sem ministérios	Onda 1	53	610	314	47	43	127	48	4	54	1	23	1728	51%	8%
+Sem ministérios	Onda 2	7	188	101	12	0	22	19	2	7	0	7	485	54%	6%
+Sem ministérios	Onda 3	91	454	258	49	4	49	45	2	95	4	5	1293	57%	11%
+Com ministérios	Onda 1	1	91	11	15	12	22	0	0	4	3	4	397	12%	16%
+Com ministérios	Onda 2	1	20	0	3	0	3	0	0	1	0	1	105	0%	15%
+Com ministérios	Onda 3	0	28	2	6	0	1	0	0	0	0	0	222	7%	21%

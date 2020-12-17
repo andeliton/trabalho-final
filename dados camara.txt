@@ -1,0 +1,10 @@
+	onda	ideologia	isolamento	menciona_executivo	ataque	defesa	mandetta	providencia	imp_sim	imp_nao	isolamento_sim	isolamento_nao	rodrigo	total	p_ataque	p_defesa 	p_isolamento
+esquerda	onda 1	esquerda	48	422	295	1	16	93	48	0	48	0	8	1065	70%	0%	11%
+	onda 2	esquerda	6	143	99	0	0	19	19	0	6	0	4	363	69%	0%	4%
+	onda 3	esquerda	82	373	256	0	0	42	45	0	82	0	5	1016	69%	0%	22%
+direita	onda 1	direita	7	144	10	48	23	18	0	4	8	1	12	544	7%	33%	6%
+	onda 2	direita	2	36	2	13	0	3	0	2	2	0	2	123	6%	36%	6%
+	onda 3	direita	3	63	1	42	1	1	0	2	3	0	0	265	2%	67%	5%
+centro	onda 1	centro	-1	135	20	13	16	38	0	0	2	3	7	516	15%	10%	1%
+	onda 2	centro	0	29	0	2	0	3	0	0	0	0	2	104	0%	7%	0%
+	onda 3	centro	6	46	3	13	3	7	0	0	10	4	0	234	7%	28%	22%
